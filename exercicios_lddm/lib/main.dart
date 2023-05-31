@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(const MainPage());
 
@@ -20,7 +21,12 @@ class telaLogin extends StatefulWidget {
 
 class _telaLogin extends State<telaLogin> {
 
-
+  _tentaLogin(String email, String senha) async{
+    final prefs = await SharedPreferences.getInstance();
+    if(email == prefs.getString('email') && senha == prefs.getString('senha')) {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => boasVindas()));
+    }
+  }
   // telaLogin({Key? key}) : super(key: key);
   bool _esconde = false;
   bool _remember = false;
@@ -158,6 +164,19 @@ class cadastro extends StatefulWidget {
 
 class _cadastro extends State<cadastro> {
 
+  _salvarDados (String nome, String data, String email, String senha) async{
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('nome', nome);
+    await prefs.setString('data', data);
+    await prefs.setString('email', email);
+    await prefs.setString('senha', senha);
+  }
+
+
+  TextEditingController _nome = TextEditingController();
+  TextEditingController _data = TextEditingController();
+  TextEditingController _emailV = TextEditingController();
+  TextEditingController _senha = TextEditingController();
   String _genero = "";
   bool _esconde = false;
   bool _email = false;
@@ -178,12 +197,14 @@ class _cadastro extends State<cadastro> {
           children: [
             Container(
               child: TextField(
+                controller: _nome,
                 maxLength: 20,
                 decoration: InputDecoration(labelText: "Nome"),
               ),
             ),
             Container(
               child: TextField(
+                controller: _data,
                 keyboardType: TextInputType.datetime,
                 maxLength: 10,
                 decoration: InputDecoration(labelText: "Data de nascimento"),
@@ -191,11 +212,13 @@ class _cadastro extends State<cadastro> {
             ),
             Container(
               child: TextField(
+                controller: _emailV,
                 decoration: InputDecoration(labelText: "E-mail"),
               ),
             ),
             Container(
                 child: TextField(
+                  controller: _senha,
                   obscureText: _esconde,
                   maxLength: 20,
                   decoration: InputDecoration(
@@ -262,7 +285,9 @@ class _cadastro extends State<cadastro> {
             Container(
               width: 300,
               child: ElevatedButton(
-                  onPressed: ()=>{},
+                  onPressed: ()=>{
+                    _salvarDados(_nome.text, _data.text, _emailV.text, _senha.text)
+                  },
                   child: Text("Register")
               ),
             ),
@@ -289,19 +314,20 @@ class _cadastro extends State<cadastro> {
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+
+class boasVindas extends StatefulWidget {
+  const boasVindas({Key? key}) : super(key: key);
 
   @override
+  _boasVindas createState() => _boasVindas();
+}
+
+class _boasVindas extends State<boasVindas> {
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Terceira Tela')),
+      appBar: AppBar(title: Text('Bem Vindo')),
       body: Center(
-          child: FilledButton(
-            onPressed: (){
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => telaLogin()));
-            },
-            child: Text('Vai para primeira tela'),)),
+          child: Text("Bem vindo")),
     );
   }
 }
