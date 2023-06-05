@@ -1,0 +1,13 @@
+com.example.aula7_navegacao_exemplo.app-jetified-window-java-1.0.0-beta04-0 /home/hudsson/.gradle/caches/transforms-3/006d93cd422dbc43e89591147c2de572/transformed/jetified-window-java-1.0.0-beta04/res
+com.example.aula7_navegacao_exemplo.app-core-1.6.0-1 /home/hudsson/.gradle/caches/transforms-3/4ca28c4a71705f8a687c69dda140a277/transformed/core-1.6.0/res
+com.example.aula7_navegacao_exemplo.app-jetified-annotation-experimental-1.1.0-2 /home/hudsson/.gradle/caches/transforms-3/8965c941cf4bee4d72541b965c7c9d39/transformed/jetified-annotation-experimental-1.1.0/res
+com.example.aula7_navegacao_exemplo.app-jetified-window-1.0.0-beta04-3 /home/hudsson/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/res
+com.example.aula7_navegacao_exemplo.app-debug-4 /home/hudsson/puc/4/lddm/exercicios/exercicios_lddm/exercicio8/android/app/src/debug/res
+com.example.aula7_navegacao_exemplo.app-main-5 /home/hudsson/puc/4/lddm/exercicios/exercicios_lddm/exercicio8/android/app/src/main/res
+com.example.aula7_navegacao_exemplo.app-pngs-6 /home/hudsson/puc/4/lddm/exercicios/exercicios_lddm/exercicio8/build/app/generated/res/pngs/debug
+com.example.aula7_navegacao_exemplo.app-resValues-7 /home/hudsson/puc/4/lddm/exercicios/exercicios_lddm/exercicio8/build/app/generated/res/resValues/debug
+com.example.aula7_navegacao_exemplo.app-rs-8 /home/hudsson/puc/4/lddm/exercicios/exercicios_lddm/exercicio8/build/app/generated/res/rs/debug
+com.example.aula7_navegacao_exemplo.app-mergeDebugResources-9 /home/hudsson/puc/4/lddm/exercicios/exercicios_lddm/exercicio8/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
+com.example.aula7_navegacao_exemplo.app-mergeDebugResources-10 /home/hudsson/puc/4/lddm/exercicios/exercicios_lddm/exercicio8/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+com.example.aula7_navegacao_exemplo.app-merged_res-11 /home/hudsson/puc/4/lddm/exercicios/exercicios_lddm/exercicio8/build/app/intermediates/merged_res/debug
+com.example.aula7_navegacao_exemplo.app-packaged_res-12 /home/hudsson/puc/4/lddm/exercicios/exercicios_lddm/exercicio8/build/shared_preferences_android/intermediates/packaged_res/debug
