@@ -158,7 +158,9 @@ class _lista extends State<lista> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+        appBar: AppBar(title: Text('Lista')),
+        body: Container(
       child: ListView.builder(
         itemCount: 20,
         itemBuilder: (context, indice){
@@ -166,9 +168,11 @@ class _lista extends State<lista> {
           return ListTile(
             title: Text(indice.toString()),
             subtitle: Text("subtitulo"),
+            onTap: ()=>{},
           );
         },
       ),
+    )
     );
   }
 
